@@ -1,4 +1,4 @@
-//task 1
+//task 1 objects literal
 const prod1 = {
   name: "",
   price: "",
@@ -57,11 +57,13 @@ const book = {
   pageCount: 400,
   publisher: "Insygnia",
 
+
   showDetails() {
-    for (const [key, value] of Object.entries(book)) {
-      console.log(`${key}: ${value}`);
+    for (const key in book) {
+      console.log(`key :${key}`)
+      console.log(`value : ${book[key]}`)
     }
-  },
+  }
 };
 
-console.log(book);
+console.log(book.showDetails());
